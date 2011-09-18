@@ -4,6 +4,7 @@ describe Aws::Consumer do
 
 	before :all do
 	@amazon_ws = Aws::Consumer.new("abcd", "xxxx", "Books", "searching the book")
+	@amazon_ws.expects(:search).returns(23)
 	end
 
 	it "should match aws key" do
@@ -21,6 +22,8 @@ describe Aws::Consumer do
 	it "should match search index" do
 		@amazon_ws.keyword.should == "searching the book"
 	end
-	
+	it "should match search index" do
+		@amazon_ws.search.should == 23
+	end
 
 end

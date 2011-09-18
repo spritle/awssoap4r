@@ -8,7 +8,7 @@ require 'pp'
 
 module Aws
 	class Consumer
-	attr_reader :aws_access_key_id, :aws_secret_key, :search_index, :keyword
+		attr_reader :aws_access_key_id, :aws_secret_key, :search_index, :keyword
 		@@url = "http://webservices.amazon.com/AWSECommerceService/AWSECommerceService.wsdl"
 		def initialize(aws_access_key_id, aws_secret_key, sIndex, keyword)
 			@aws_access_key_id = aws_access_key_id
